@@ -46,6 +46,8 @@ namespace :deploy do
       # within release_path do
       #   execute :rake, 'cache:clear'
       # end
+
+      # add # gem install unicorn rack
     end
   end
 
