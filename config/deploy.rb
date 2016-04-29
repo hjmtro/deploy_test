@@ -30,7 +30,9 @@ set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/system')
 
 # Default value for default_env is {}
-set :default_env, { path: "/opt/ruby/bin:$PATH" }
+# set :default_env, { path: "/opt/ruby/bin:$PATH" }
+set :rbenv_type, :system # :system or :user # add
+set :rbenv_ruby, '2.3.1' # add
 
 # Default value for keep_releases is 5
 set :keep_releases, 5
