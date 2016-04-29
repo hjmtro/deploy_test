@@ -49,7 +49,7 @@ namespace :deploy do
       # end
 
       # add # gem install unicorn rack
-      # add # chown -R vagrant:vagrant www
+      # add これはいらなさそう # chown -R vagrant:vagrant www 
     end
   end
 
