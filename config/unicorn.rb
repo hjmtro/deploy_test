@@ -6,7 +6,8 @@ app_path = "/var/www/deploy_test/current"
 worker_processes 3
 working_directory app_path
 
-listen File.expand_path('tmp/sockets/unicorn.sock', shared_path)
+#listen File.expand_path('tmp/sockets/unicorn.sock', shared_path)
+listen File.expand_path('run/sockets/unicorn.sock', shared_path)
 timeout 600
 
 pid File.expand_path('tmp/pids/unicorn.pid', shared_path)
