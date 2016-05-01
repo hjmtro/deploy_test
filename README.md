@@ -1,4 +1,4 @@
-### Capistranoでデプロイ自動化（unicorn再起動付き）
+### Capistranoでデプロイ自動化（unicorn再起動あり）
 
 次のコマンドを実行してデプロイする。
 
