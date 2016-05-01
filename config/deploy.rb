@@ -64,7 +64,8 @@ namespace :deploy do
       upload!('config/secrets.yml', "#{shared_path}/config/secrets.yml")
     end
   end
-  before :starting, 'deploy:upload'
+  after 'deploy:check:make_linked_dirs', 'deploy:upload'
+  #before :starting, 'deploy:upload'
 
   # add
   desc 'Restart application'
