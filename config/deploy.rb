@@ -44,13 +44,20 @@ namespace :deploy do
   after :restart, :clear_cache do
     on roles(:web), in: :groups, limit: 3, wait: 10 do
       # Here we can do anything such as:
-      # within release_path do
+      #within release_path do
       #   execute :rake, 'cache:clear'
-      # end
+      #end
 
-      # add # gem install unicorn rack
-      # add これはいらなさそう # chown -R vagrant:vagrant www 
+      # add # gem install unicorn, rack
+      # add これはいらなさそう # chown -R vagrant:vagrant www
     end
   end
+
+  # add
+  desc 'Restart application'
+  task :restart do
+    invoke 'unicorn:restart'
+  end
+  after 'deploy:publishing', 'deploy:restart'
 
 end
