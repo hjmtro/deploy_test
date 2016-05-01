@@ -54,6 +54,19 @@ namespace :deploy do
   end
 
   # add
+  desc 'Upload database.yml and secrets.yml'
+  task :upload do
+    on roles(:app) do |host|
+      #if test "[ ! -d #{shared_path}/config ]"
+      #  execute "mkdir -p #{shared_path}/config"
+      #end
+      upload!('config/database.yml', "#{shared_path}/config/database.yml")
+      upload!('config/secrets.yml', "#{shared_path}/config/secrets.yml")
+    end
+  end
+  before :starting, 'deploy:upload'
+
+  # add
   desc 'Restart application'
   task :restart do
     invoke 'unicorn:restart'
