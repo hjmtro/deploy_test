@@ -54,10 +54,6 @@ namespace :deploy do
   end
 
   # add
-  #desc 'Restart application'
-  #task :restart do
-  #  invoke 'unicorn:restart'
-  #end
-  #after 'deploy:publishing', 'deploy:restart'
+  after 'deploy:publishing', 'deploy:restart'
 
 end
