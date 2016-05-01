@@ -20,7 +20,7 @@ GC.respond_to?(:copy_on_write_friendly=) and
 
 check_client_connection false
 
-ENV['BUNDLE_GEMFILE'] = rails_root + "/Gemfile"
+ENV['BUNDLE_GEMFILE'] = "#{app_path}/Gemfile"
 before_fork do |server, worker|
   #ENV['BUNDLE_GEMFILE'] = "#{app_path}/Gemfile"
 
