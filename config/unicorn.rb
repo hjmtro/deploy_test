@@ -20,9 +20,8 @@ GC.respond_to?(:copy_on_write_friendly=) and
 
 check_client_connection false
 
-ENV['BUNDLE_GEMFILE'] = "#{app_path}/Gemfile"
 before_fork do |server, worker|
-  #ENV['BUNDLE_GEMFILE'] = "#{app_path}/Gemfile"
+  ENV['BUNDLE_GEMFILE'] = "#{app_path}/Gemfile"
 
   # the following is highly recomended for Rails + "preload_app true"
   # as there's no need for the master process to hold a connection
