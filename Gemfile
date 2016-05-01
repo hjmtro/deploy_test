@@ -44,11 +44,3 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-
-# add
-gem 'capistrano', '~> 3.0.1'
-gem 'capistrano-rails'
-gem 'capistrano-bundler'
-gem 'capistrano-rbenv'
-gem 'unicorn'
-gem 'capistrano3-unicorn'
