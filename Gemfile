@@ -46,7 +46,6 @@ group :development do
 end
 
 # add
-gem 'bundler'
 gem 'capistrano'
 gem 'capistrano-rails'
 gem 'capistrano-rbenv'
