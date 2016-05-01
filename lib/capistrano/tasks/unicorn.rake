@@ -6,7 +6,8 @@ namespace :unicorn do
   end
 
   def start_unicorn
-    within current_path do
+    #within current_path do
+    within '/var/www/deploy_test/current' do
       #execute :bundle, :exec, :unicorn, "-c #{fetch(:unicorn_config)} -E #{fetch(:rails_env)} -D"
       execute :bundle, :exec, :unicorn, "-c production -E development"
     end
